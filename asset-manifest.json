@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/osoff-dev/static/css/main.85aa91d0.css",
+    "main.css": "/osoff-dev/static/css/main.32c227b9.css",
     "main.js": "/osoff-dev/static/js/main.e10c7016.js",
-    "static/media/ava.png": "/osoff-dev/static/media/ava.254f881f0e6231b6b285.png",
+    "static/media/ava.jpg": "/osoff-dev/static/media/ava.0009b331f11d01c4fb1c.jpg",
     "static/media/mainPage.png": "/osoff-dev/static/media/mainPage.c7306902fa9d01ec7cfa.png",
     "static/media/mainPagedark.png": "/osoff-dev/static/media/mainPagedark.e2e71babe018ecd6966f.png",
     "static/media/Vector.png": "/osoff-dev/static/media/Vector.e0b0ce14110dc0a95fbe.png",
@@ -10,11 +10,11 @@
     "static/media/revicons.ttf": "/osoff-dev/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/osoff-dev/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/osoff-dev/index.html",
-    "main.85aa91d0.css.map": "/osoff-dev/static/css/main.85aa91d0.css.map",
+    "main.32c227b9.css.map": "/osoff-dev/static/css/main.32c227b9.css.map",
     "main.e10c7016.js.map": "/osoff-dev/static/js/main.e10c7016.js.map"
   },
   "entrypoints": [
-    "static/css/main.85aa91d0.css",
+    "static/css/main.32c227b9.css",
     "static/js/main.e10c7016.js"
   ]
 }
