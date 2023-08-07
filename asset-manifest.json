@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/osoff-dev/static/css/main.32c227b9.css",
-    "main.js": "/osoff-dev/static/js/main.e10c7016.js",
+    "main.js": "/osoff-dev/static/js/main.d597446d.js",
     "static/media/ava.jpg": "/osoff-dev/static/media/ava.0009b331f11d01c4fb1c.jpg",
     "static/media/mainPage.png": "/osoff-dev/static/media/mainPage.c7306902fa9d01ec7cfa.png",
     "static/media/mainPagedark.png": "/osoff-dev/static/media/mainPagedark.e2e71babe018ecd6966f.png",
@@ -11,10 +11,10 @@
     "static/media/revicons.woff": "/osoff-dev/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/osoff-dev/index.html",
     "main.32c227b9.css.map": "/osoff-dev/static/css/main.32c227b9.css.map",
-    "main.e10c7016.js.map": "/osoff-dev/static/js/main.e10c7016.js.map"
+    "main.d597446d.js.map": "/osoff-dev/static/js/main.d597446d.js.map"
   },
   "entrypoints": [
     "static/css/main.32c227b9.css",
-    "static/js/main.e10c7016.js"
+    "static/js/main.d597446d.js"
   ]
 }
