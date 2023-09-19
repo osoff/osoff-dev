@@ -1,6 +1,8 @@
 import vector from "./Vector.png";
 import "./dark-theme.css";
 import Avatar from "./Avatar";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 import {
   FaReact,
   FaHtml5,
@@ -15,10 +17,11 @@ import { BsSunFill, BsFillMoonFill, BsChevronDown } from "react-icons/bs";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useEffect, useState, useRef } from "react";
+import { useKey } from "./useKey";
+import { useLocalStorage } from "./useLocalStorage";
 
 const telegram = "tg://resolve?domain=osoff";
-const gmail =
-  "https://mail.google.com/mail/u/2/?pli=1#inbox?compose=DmwnWtMkMQfbNCWNGlWnNKZDhSWgWrHwKhcdQHKTCVmsFdZNTQDnlKMMGFDzrhLWclMCQwbKRkxl";
+const gmail = "mailto:anatolywebdev@gmail.com";
 const github = "https://github.com/osoff";
 const linkedin = "https://www.linkedin.com/in/anatoly-undefined-b6baa8286/";
 export default function App() {
@@ -55,7 +58,7 @@ export default function App() {
     };
   }, []);
 
-  const [darkmode, setDarkmode] = useState(false);
+  const [darkmode, setDarkmode] = useLocalStorage(false, "darkmode");
   darkmode === true
     ? (document.body.style.background =
         "linear-gradient(90deg, #1D1D21,#1e1f23, #1f1f24,#1e1f23, #1D1D21)")
@@ -318,7 +321,7 @@ function Info({ darkmode, windowSize, aboutref }) {
                 with a friendly user interface. I have experience writing web
                 services that are optimized in their work using advanced
                 technologies. I also like working in a team, thinking about
-                problems, and most importantly about their.
+                problems, and most importantly about their solutions.
               </p>
               <div className="skills" style={{ textAlign: "right" }}>
                 <span style={{ fontWeight: "300", fontSize: "30px" }}>
@@ -420,56 +423,56 @@ const elements = [
   {
     id: 1,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 2,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 3,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 4,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 5,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 6,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 7,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
   {
     id: 8,
     title: "SearchFilms",
-    img: "/assets/images/film.png",
+    img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
     src: "",
   },
@@ -487,7 +490,11 @@ function Projects({ darkmode, projref }) {
         <p className="pereliv zagl pproj">PROJECTS</p>
       </div>
       <div style={{ margin: "100px 0px" }}>
-        <Carousel responsive={responsive}>
+        <Carousel
+          swipeable={true}
+          keyBoardControl={true}
+          responsive={responsive}
+        >
           {elements.map((e) => (
             <ProjEl
               darkmode={darkmode}
@@ -506,7 +513,7 @@ function ProjEl({ darkmode, title, img, text }) {
   return (
     <div className={darkmode ? "prjeldark" : "prjel"}>
       <h3 className="pereliv">{title}</h3>
-      <img src={img} alt="altim" />
+      <img src={img} alt="altim" style={{ pointerEvents: "none" }} />
       <p>{text}</p>
     </div>
   );
@@ -519,7 +526,7 @@ function Contacts({ darkmode, contref }) {
     >
       <div>
         <p className="zagl pereliv">CONTACTS</p>
-        <p ref={contref} className="zagl" style={{ marginTop: "50px" }}>
+        <p ref={contref} className="zagl cntcs" style={{ marginTop: "50px" }}>
           FOR ANY <span style={{ color: "#4a00ff" }}>PROJECTS INQUIERY</span>{" "}
           {"or for more information about what I do, please feel free to get in touch".toUpperCase()}
         </p>
@@ -581,16 +588,25 @@ function Footer({ darkmode }) {
   );
 }
 function ThemeButton({ darkmode, setDarkmode }) {
+  useKey("KeyM", function () {
+    setDarkmode((dark) => !dark);
+  });
+
   return (
-    <button
-      className="Btn"
-      style={{ backgroundColor: darkmode ? "#3330ff" : "" }}
-      onClick={() => {
-        setDarkmode((dark) => !dark);
-      }}
-    >
-      {darkmode && <BsSunFill className="svgIcon" />}
-      {!darkmode && <BsFillMoonFill className="svgIcon" />}
-    </button>
+    <>
+      <button
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content="You can press M"
+        className="Btn"
+        style={{ backgroundColor: darkmode ? "#3330ff" : "" }}
+        onClick={() => {
+          setDarkmode((dark) => !dark);
+        }}
+      >
+        {darkmode && <BsSunFill className="svgIcon" />}
+        {!darkmode && <BsFillMoonFill className="svgIcon" />}
+      </button>
+      <Tooltip id="my-tooltip" place="left" variant="dark" />
+    </>
   );
 }
