@@ -429,10 +429,10 @@ const elements = [
   },
   {
     id: 2,
-    title: "SearchFilms",
-    img: "./assets/images/film.png",
-    text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
-    src: "",
+    title: "OsOff Shop",
+    img: "./assets/images/shop.png",
+    text: "Shop application with favorites, products list, card",
+    src: "https://osoff.github.io/niketail/",
   },
   {
     id: 3,
