@@ -22,6 +22,12 @@
   color: white;
 }
 
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+}
+
 .drawer.open {
   transform: translateX(0%);
 }

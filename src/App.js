@@ -425,7 +425,7 @@ const elements = [
     title: "SearchFilms",
     img: "./assets/images/film.png",
     text: "An application for finding movies with the addition of the viewed section. Implemented the addition of a rating.",
-    src: "",
+    src: "https://osoff.github.io/usepopcorn/",
   },
   {
     id: 2,
@@ -496,13 +496,15 @@ function Projects({ darkmode, projref }) {
           responsive={responsive}
         >
           {elements.map((e) => (
-            <ProjEl
-              darkmode={darkmode}
-              key={e.id}
-              title={e.title}
-              img={e.img}
-              text={e.text}
-            />
+            <a href={e.src} target="_blank" rel="noreferrer">
+              <ProjEl
+                darkmode={darkmode}
+                key={e.id}
+                title={e.title}
+                img={e.img}
+                text={e.text}
+              />
+            </a>
           ))}
         </Carousel>
       </div>
@@ -514,7 +516,7 @@ function ProjEl({ darkmode, title, img, text }) {
     <div className={darkmode ? "prjeldark" : "prjel"}>
       <h3 className="pereliv">{title}</h3>
       <img src={img} alt="altim" style={{ pointerEvents: "none" }} />
-      <p>{text}</p>
+      <p style={{ color: darkmode ? "white" : "black" }}>{text}</p>
     </div>
   );
 }
