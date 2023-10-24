@@ -323,7 +323,10 @@ function Info({ darkmode, windowSize, aboutref }) {
                 technologies. I also like working in a team, thinking about
                 problems, and most importantly about their solutions.
               </p>
-              <div className="skills" style={{ textAlign: "right" }}>
+              <div
+                className="skills"
+                style={{ textAlign: "right", alignItems: "center" }}
+              >
                 <span style={{ fontWeight: "300", fontSize: "30px" }}>
                   Tech stack |
                 </span>
