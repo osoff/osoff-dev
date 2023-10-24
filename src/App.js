@@ -12,7 +12,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
-import { SiMui, SiMaildotru } from "react-icons/si";
+import { SiMui, SiMaildotru, SiTailwindcss } from "react-icons/si";
 import { BsSunFill, BsFillMoonFill, BsChevronDown } from "react-icons/bs";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -347,7 +347,7 @@ function Info({ darkmode, windowSize, aboutref }) {
                   className="ico"
                   style={{ color: darkmode ? "#dd0032" : "" }}
                 />
-                <SiMui
+                <SiTailwindcss
                   className="ico"
                   style={{ color: darkmode ? "#027fff" : "" }}
                 />
