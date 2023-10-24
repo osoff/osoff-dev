@@ -366,7 +366,7 @@ function Info({ darkmode, windowSize, aboutref }) {
             working in a team, thinking about problems, and most importantly
             about their.
           </p>
-          <div className="skills" style={{ textAlign: "left" }}>
+          <div className="skills skillicons" style={{ textAlign: "left" }}>
             <span style={{ fontWeight: "300", fontSize: "30px" }}>
               Tech stack |
             </span>
@@ -390,7 +390,7 @@ function Info({ darkmode, windowSize, aboutref }) {
               className="ico"
               style={{ color: darkmode ? "#dd0032" : "" }}
             />
-            <SiMui
+            <SiTailwindcss
               className="ico"
               style={{ color: darkmode ? "#027fff" : "" }}
             />
