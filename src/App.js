@@ -23,7 +23,7 @@ import { useLocalStorage } from "./useLocalStorage";
 const telegram = "tg://resolve?domain=osoff";
 const gmail = "mailto:anatolywebdev@gmail.com";
 const github = "https://github.com/osoff";
-const linkedin = "https://www.linkedin.com/in/anatoly-undefined-b6baa8286/";
+const linkedin = "https://www.linkedin.com/in/anatoly-isupov-b6baa8286/";
 export default function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [windowSize, setWindowSize] = useState({
@@ -323,10 +323,7 @@ function Info({ darkmode, windowSize, aboutref }) {
                 technologies. I also like working in a team, thinking about
                 problems, and most importantly about their solutions.
               </p>
-              <div
-                className="skills"
-                style={{ textAlign: "right", alignItems: "center" }}
-              >
+              <div className="skills skillicons">
                 <span style={{ fontWeight: "300", fontSize: "30px" }}>
                   Tech stack |
                 </span>
